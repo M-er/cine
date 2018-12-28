@@ -1,0 +1,273 @@
+
+<!doctype html>
+<html lang="es" ng-app="cineAPP">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="generator" content="Jekyll v3.8.5">
+  <title>Cine Santa Rosa</title>
+  <!-- Bootstrap core CSS -->
+  <link href="./assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <!-- Index CSS -->
+  <link href="./assets/css/index.css" rel="stylesheet">
+  <!-- AngularJS Material CSS -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
+
+</head>
+<body class="h-100 bg-cine">
+  <header>
+    <!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container">
+    <div class="col-sm-5 col-md-2">
+    <img src="./assets/img/logoCineVioleta.svg" alt="">
+  </div>
+  <div class="col-sm-2 col-md-8"></div>
+  <div class="col-sm-5 col-md-2">
+  <a href="#"><img src="./assets/img/iconos/caralibro.png" alt="Logo de facebook"> </a>
+  <a href="#"><img src="./assets/img/iconos/twitter.png" alt="Logo de twitter"> </a>
+  <a href="#"><img src="./assets/img/iconos/instagram.png" alt="Logo de instagram"> </a>
+</div>
+</div>
+</nav> -->
+</header>
+<main role="main" class="flex-shrink-0 ">
+  <section>
+    <div class="container">
+      <div class="row">
+        <nav class="navbar w-100">
+          <div class="col-sm-6 col-md-2 float-left">
+            <img style="height:6em" src="./assets/img/logoCine.svg" alt="">
+          </div>
+          <div class="col-md-2"></div>
+          <div class="col-sm-6 col-md-8">
+            <a href="https://www.instagram.com.ar" class="d-inline p-2 float-right" ><img src="./assets/img/iconos/instagram.png" alt="Logo de instagram"> </a>
+            <a href="https://www.twitter.com.ar" class="d-inline p-2 float-right" ><img src="./assets/img/iconos/twitter.png" alt="Logo de twitter"> </a>
+            <a href="https://www.facebook.com.ar" class="d-inline p-2 float-right" ><img src="./assets/img/iconos/caralibro.png" alt="Logo de facebook"> </a>
+            <a href="#ubicacion" class="d-inline p-2 pi-3 float-right text-white font-italic">¿ Cómo llegar ? <img style="max-height: 18px; margin-left:1em" src="./assets/img/iconos/ubicacion.svg" alt="Logo de facebook"> </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </section>
+  <section class="mascaraOscura">
+    <div class="row w-100 lucesT"></div>
+    <div class="container w-100">
+      <div class="justify-content-center">
+        <div class="row justify-content-center">
+          <div class="mx-auto">
+            <h1 class="text-white">- ESTA SEMANA EN CINES -</h1>
+          </div>
+        </div>
+        <div class="row h-100">
+          <div class="col-md-3"></div>
+          <div style="max-width: 253px;"class="col-5 col-md-3 d-flex flex-colum"><img class="img-fluid" src="./assets/img/logos/amadeus.svg" alt=""> </div>
+          <div style="max-width: 80px;" class="col-2 col-md-3 d-flex flex-colum"><img class="img-fluid" src="./assets/img/logos/estrellas.svg" alt=""> </div>
+          <div style="max-width: 265px;"class="col-5 col-md-3 d-flex flex-colum"><img class="img-fluid" src="./assets/img/logos/milenium.svg" alt=""> </div>
+        </div>
+        <div class="row justify-content-center">
+          <img class="ml-2 mt-4" src="./assets/img/peliprueba1.jpg" alt="">
+          <img class="ml-2 mt-4" src="./assets/img/peliprueba2.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="row w-100 lucesB"></div>
+  </section>
+  <section class="bg-cine">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-10">
+          <hr class="my-4">
+          <div class="col-sm-10 col-md-10 float-left">
+            <div class="row" ng-controller="cineCtrl">
+              <div class="card w-100 pelicula" >
+                <div class="card-body text-white">
+                  <div class="row h-100 justify-content-center align-items-center"> <h2> {{titulo1}} </h2> </div>
+                  <div class="row h-100 justify-content-center align-items-center"> <h2>{{genero1}} </h2> </div>
+                  <div class="row">
+                    <div style="clear:both;width:100%;"></div>
+                    <div class="col-sm-6 col-md-4 float-left d-none d-sm-block">
+                      <img class="altoBox" ng-src="{{imagePath1}}" class="md-card-image" alt="{{titulo1}}">
+                    </div>
+                    <div class="col-sm-6 col-md-8 float-right">
+                      <div class="video-wrap">
+                        <div class="video-container">
+                          <iframe style="height:100%" src="https://www.youtube.com/embed/gFRrcICv_DM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row d-md-none justify-content-center text-white">
+                    <md-select ng-model="fecha1" placeholder="Elija una Fecha" class="md-no-underline">
+                      <md-option value="01">01/01/2019</md-option>
+                      <md-option value="02">02/01/2019</md-option>
+                      <md-option value="03">03/01/2019</md-option>
+                    </md-select>
+                  </div>
+                  <div style="clear:both;width:100%;"></div>
+                  <div class="row">
+                    <div class="d-none d-sm-block">
+                      <span class="md-headline"> <p  class="text-uppercase"> {{info1}} </p> </span>
+                      <div class="table-responsive table--no-card m-b-30 ">
+                        <table class="table table-borderless table-striped table-earning">
+                          <thead class="bg-info">
+                            <tr>
+                              <th>Jueves 3</th>
+                              <th>Viernes 4</th>
+                              <th>Sábado 5</th>
+                              <th>Domingo 6</th>
+                              <th>Lunes 7</th>
+                              <th>Martes 8</th>
+                              <th>Miércoles 9</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class={{fondo1}}>19:00 HS Castellano Cine: {{cine1}}</td>
+                              <td class={{fondo1}}>19:00 HS Castellano Cine: {{cine1}}</td>
+                              <td class={{fondo1}}>19:00 HS Castellano Cine: {{cine1}}</td>
+                              <td class={{fondo1}}>19:00 HS Castellano Cine: {{cine1}}</td>
+                              <td class={{fondo1}}>19:00 HS Castellano Cine: {{cine1}}</td>
+                              <td class={{fondo1}}>19:00 HS Castellano Cine: {{cine1}}</td>
+                              <td class={{fondo1}}>19:00 HS Castellano Cine: {{cine1}}</td>
+                            </tr>
+                            <tr>
+                              <td class={{fondo1}}>21:30 HS Castellano Cine: {{cine1}}</td>
+                              <td class={{fondo1}}>21:30 HS Castellano Cine: {{cine1}}</td>
+                              <td class={{fondo1}}>21:30 HS Castellano Cine: {{cine1}}</td>
+                              <td class={{fondo1}}>21:30 HS Castellano Cine: {{cine1}}</td>
+                              <td class={{fondo1}}>21:30 HS Castellano Cine: {{cine1}}</td>
+                              <td class={{fondo1}}>21:30 HS Castellano Cine: {{cine1}}</td>
+                              <td class={{fondo1}}>21:30 HS Castellano Cine: {{cine1}}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card w-100 pelicula" >
+                <div class="card-body text-white">
+                  <div class="row h-100 justify-content-center align-items-center"> <h2>{{titulo2}}</h2> </div>
+                  <div class="row h-100 justify-content-center align-items-center"> <h2>{{genero2}} </h2> </div>
+                  <div class="row">
+                    <div style="clear:both;width:100%;"></div>
+                    <div class="col-sm-6 col-md-4 float-left d-none d-sm-block">
+                      <img class="altoBox" ng-src="{{imagePath2}}" class="md-card-image" alt={{titulo2}}>
+                    </div>
+                    <div class="col-sm-6 col-md-8 float-right">
+                      <div class="video-wrap">
+                        <div class="video-container">
+                          <iframe style="height:100%"  src="https://www.youtube.com/embed/d9_LtWtxaD4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row d-md-none justify-content-center text-white">
+                    <md-select ng-model="fecha2" placeholder="Elija una Fecha" class="md-no-underline">
+                      <md-option value="01">01/01/2019</md-option>
+                      <md-option value="02">02/01/2019</md-option>
+                      <md-option value="03">03/01/2019</md-option>
+                    </md-select>
+                  </div>
+                  <div style="clear:both;width:100%;"></div>
+                  <div class="row">
+                    <div class="d-none d-sm-block">
+                      <span class="md-headline"> <p  class="text-uppercase"> {{info2}} </p> </span>
+                      <div class="table-responsive table--no-card m-b-30 ">
+                        <table class="table table-borderless table-striped table-earning">
+                          <thead class="bg-info">
+                            <tr>
+                              <th>Jueves 3</th>
+                              <th>Viernes 4</th>
+                              <th>Sábado 5</th>
+                              <th>Domingo 6</th>
+                              <th>Lunes 7</th>
+                              <th>Martes 8</th>
+                              <th>Miércoles 9</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class={{fondo2}}>19:00 HS Castellano Cine: {{cine2}}</td>
+                              <td class={{fondo2}}>19:00 HS Castellano Cine: {{cine2}}</td>
+                              <td class={{fondo2}}>19:00 HS Castellano Cine: {{cine2}}</td>
+                              <td class={{fondo2}}>19:00 HS Castellano Cine: {{cine2}}</td>
+                              <td class={{fondo2}}>19:00 HS Castellano Cine: {{cine2}}</td>
+                              <td class={{fondo2}}>19:00 HS Castellano Cine: {{cine2}}</td>
+                              <td class={{fondo2}}>19:00 HS Castellano Cine: {{cine2}}</td>
+                            </tr>
+                            <tr>
+                              <td class={{fondo2}}>21:30 HS Castellano Cine: {{cine2}}</td>
+                              <td class={{fondo2}}>21:30 HS Castellano Cine: {{cine2}}</td>
+                              <td class={{fondo2}}>21:30 HS Castellano Cine: {{cine2}}</td>
+                              <td class={{fondo2}}>21:30 HS Castellano Cine: {{cine2}}</td>
+                              <td class={{fondo2}}>21:30 HS Castellano Cine: {{cine2}}</td>
+                              <td class={{fondo2}}>21:30 HS Castellano Cine: {{cine2}}</td>
+                              <td class={{fondo2}}>21:30 HS Castellano Cine: {{cine2}}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-md-2 mb-2 float-right">
+            <hr class="my-4">
+            <img class="img-fluid" src="./assets/img/valorentrada.png" alt="">
+            <img class="img-fluid" src="./assets/img/martes-de-descuento1.png" alt="">
+            <img class="img-fluid" src="./assets/img/newsletter.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="ubicacion" class="bg-cine">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 float-left">
+          <div class="mt-5 mb-5 row justify-content-center ">
+            <img class="img-fluid" src="./assets/img/logos/amadeus.svg" alt="">
+            <div class="mt-2 mapa">
+              <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;q=cine%20amadeus%2C%20santa%20rosa%20la%20pampa%2C%20argentina&amp;aq=0&amp;ie=UTF8&amp;t=m&amp;z=16&amp;iwloc=A&amp;output=embed" width="600" height="450" frameborder="0" style="border:0" allowfullscreen ></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 float-right">
+          <div class="mt-5 mb-5 row justify-content-center ">
+            <img class="img-fluid" src="./assets/img/logos/milenium.svg" alt="">
+            <div class="mt-2 mapa">
+              <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;q=Cine%20Milenium%2C%20Escalante%2C%20Santa%20Rosa%2C%20La%20Pampa&amp;aq=0&amp;ie=UTF8&amp;t=m&amp;z=16&amp;iwloc=A&amp;output=embed" width="600" height="450" frameborder="0" style="border:0" allowfullscreen ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- <footer class="footer mt-auto py-3">
+<div class="container">
+<span class="text-muted">Place sticky footer content here.</span>
+</div>
+</footer> -->
+<!-- Jquery Libraries -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- Bootstrap Libraries -->
+<script src="./assets/vendor/bootstrap/bootstrap.min.js"></script>
+<!-- Angular Material requires Angular.js Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
+<!-- Angular Material Library -->
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.11/angular-material.min.js"></script>
+<!-- Custom JS Controller -->
+<script src="./app/index.js"></script>
+
+</body>
+</html>
